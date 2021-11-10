@@ -10,6 +10,7 @@ public class Main {
 //		Создайте переменные для каждого примитивного типа, подумайте об ограничениях по
 //		наименованию переменных.
 	System.out.println("Task 1: variables");
+
 	byte b = 10;
 	short s = 20;
 	int i = 30;
