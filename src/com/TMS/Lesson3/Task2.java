@@ -1,4 +1,4 @@
-package com.TMS.Lesson4;
+package com.TMS.Lesson3;
 
 import java.util.Arrays;
 

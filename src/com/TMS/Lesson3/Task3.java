@@ -1,6 +1,4 @@
-package com.TMS.Lesson4;
-
-import java.util.Arrays;
+package com.TMS.Lesson3;
 
 public class Task3 {
     public static void main(String[] args) {
