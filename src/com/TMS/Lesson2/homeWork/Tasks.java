@@ -7,6 +7,7 @@ public class Tasks {
     public static void main(String[] args) {
         //task 1
         System.out.println("Task 1: ");
+
         Scanner scr = new Scanner(System.in);
         String userWord = scr.next();
 
