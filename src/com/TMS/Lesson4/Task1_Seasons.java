@@ -11,4 +11,12 @@ public enum Task1_Seasons {
     Task1_Seasons(String month){
         this.month = month;
     }
+
+    public String getMonth() {
+        return month;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
+    }
 }
