@@ -1,6 +1,7 @@
 package com.TMS.Lesson5;
 
 public abstract class Employee extends Person{
+
    EMPLOYEE_ENUM[] jobTitle = EMPLOYEE_ENUM.values();
    EMPLOYEE_ENUM director = EMPLOYEE_ENUM.DIRECTOR;
    EMPLOYEE_ENUM worker = EMPLOYEE_ENUM.WORKER;

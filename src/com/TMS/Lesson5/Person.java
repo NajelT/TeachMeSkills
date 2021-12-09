@@ -1,6 +1,5 @@
 package com.TMS.Lesson5;
 
-import java.sql.SQLOutput;
 
 public class Person {
     String name;
