@@ -1,19 +1,13 @@
 package com.TMS.Lesson5;
 
+
 public class Person {
-
     String name;
-    String lastName;
+    String lastname;
 
-    public Person(String name, String lastName){
-        this.name = name;
-        this.lastName = lastName;
+    public String getNameAndLastname(){
+        System.out.println(name + " " + lastname);
+        return name+lastname;
     }
-
-    public void getNameAndLastName(){
-        System.out.println("name is - " + name + " | lastName is - " + lastName);
-    }
-
-
 
 }

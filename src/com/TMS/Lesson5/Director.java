@@ -1,49 +1,34 @@
 package com.TMS.Lesson5;
 
-import java.util.Arrays;
-
 public class Director extends Employee {
-    private Employee [] countOfWorkers = null;
+    int countOfWorkers;
 
-
-    public Director(String name, String lastName, int experience, int baseRate){
-        super(name, lastName, experience, baseRate);
-    }
-
-    public void addWorker(Employee employee) {
-        if(countOfWorkers ==null){
-            countOfWorkers =new Employee[1];
-            countOfWorkers[0]=employee;
-        }else{
-            countOfWorkers =Arrays.copyOf(countOfWorkers, countOfWorkers.length+1);
-            countOfWorkers[countOfWorkers.length-1]=employee;
-        }
-        System.out.println("Added worker: " + employee.toString());
-    }
-
-    public void getSubordinatesInfo(){
-        System.out.println("Workers under " + name + " supervision: ");
-        for (Employee employee : countOfWorkers) {
-            employee.getInfo();
-        }
-    }
+    EMPLOYEE_ENUM director = EMPLOYEE_ENUM.DIRECTOR;
 
     @Override
-    public int salaryCounter() {
-        int salary = getExperience() * getBaseRate() * JOBROLE.DIRECTOR.coefficient * countOfWorkers.length+1;
-        return salary;
-    }
+    public void setEmployeeJobTitle(){
 
-    @Override
-    public void setJobRole() {
-        jobrole = JOBROLE.DIRECTOR;
-        System.out.println("JobRole is - " + jobrole);
-    }
 
-    @Override
-    public void getInfo() {
-        setJobRole();
-        getNameAndLastName();
-        System.out.println("Experience - " + this.getExperience() + " years. Salary - " + salaryCounter() + "$");
-    }
 }
+    public EMPLOYEE_ENUM addWorker(EMPLOYEE_ENUM employee_enum){
+        EMPLOYEE_ENUM WorkerUnderControl = EMPLOYEE_ENUM.valueOf("DIRECTOR");
+        return employee_enum;
+        }
+
+
+    public void setCountOfWorkers(int countOfWorkers) {
+        this.countOfWorkers = countOfWorkers;
+    }
+
+    @Override
+    public int salaryCounterForDir(int experience, int dirCoef, int baseRate){
+
+        this.experience = experience;
+        this.dirCoef = dirCoef;
+        this.baseRate = baseRate;
+        int result = experience*dirCoef*baseRate*countOfWorkers;
+        return result;
+    }
+
+}
+
