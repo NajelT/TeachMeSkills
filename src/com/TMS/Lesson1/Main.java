@@ -1,4 +1,4 @@
-package com.TMS.Lesson1.primitives;
+package com.TMS.Lesson1;
 
 
 import java.util.Scanner;
