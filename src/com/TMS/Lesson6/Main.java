@@ -1,9 +1,8 @@
-package com.TMS.Lesson5;
-
-import java.util.ArrayList;
+package com.TMS.Lesson6;
 
 public class Main {
     public static void main(String[] args) {
+        Finder finder = new FinderImpl();
         Director director1 = new Director("Ilja", "Lushpajev", 5,2000);
         Director director2 = new Director("Elvira", "Tovpeko", 2,2000);
 
@@ -12,17 +11,14 @@ public class Main {
         Employee worker3 = new Worker("Leo", "Salamatin", 1, 1000);
 
         director1.addWorker(worker1);
-        director1.addWorker(worker2);
+        director2.addWorker(worker2);
         director2.addWorker(worker3);
-        director1.addWorker(director1);
+        director1.addWorker(director2);
+        director1.getSubInfo();
         System.out.println("----------");
-        director1.getInfo();
-        System.out.println("----------");
-        worker1.getInfo();
-        System.out.println("----------");
+        finder.find(director1, "Leo");
 
-        director1.getSubordinatesInfo();
-        System.out.println("----------");
+
 
 
 

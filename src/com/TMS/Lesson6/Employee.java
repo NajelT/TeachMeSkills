@@ -1,4 +1,4 @@
-package com.TMS.Lesson5;
+package com.TMS.Lesson6;
 
 public abstract class Employee extends Person{
     public JOBROLE jobrole;

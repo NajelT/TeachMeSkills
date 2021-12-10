@@ -1,4 +1,4 @@
-package com.TMS.Lesson5;
+package com.TMS.Lesson6;
 
 public class Person {
 
@@ -14,6 +14,7 @@ public class Person {
         System.out.println("name is - " + name + " | lastName is - " + lastName);
     }
 
-
-
+    public String getName() {
+        return name;
+    }
 }

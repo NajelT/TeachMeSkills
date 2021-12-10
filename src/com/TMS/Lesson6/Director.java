@@ -1,4 +1,4 @@
-package com.TMS.Lesson5;
+package com.TMS.Lesson6;
 
 import java.util.Arrays;
 
@@ -18,10 +18,14 @@ public class Director extends Employee {
             countOfWorkers =Arrays.copyOf(countOfWorkers, countOfWorkers.length+1);
             countOfWorkers[countOfWorkers.length-1]=employee;
         }
-        System.out.println("Added worker: " + employee.toString());
+        System.out.println("Added worker: " + employee.toString()+ " | responsible to " + name);
     }
 
-    public void getSubordinatesInfo(){
+    public Employee[] getCountOfWorkers() {
+        return countOfWorkers;
+    }
+
+    public void getSubInfo() throws NullPointerException{
         System.out.println("Workers under " + name + " supervision: ");
         for (Employee employee : countOfWorkers) {
             employee.getInfo();
